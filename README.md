@@ -17,4 +17,4 @@ To get started copy over bootstrap-centos.sh to your vanilla Centos 6 installati
 	
 	}
 	
-Edit run_list to include your desired modules, main::default gives reasonable defaults for a apache+passenger+mysql rails platform.
+Edit run_list to include your desired modules, main::default gives reasonable defaults for an apache+passenger+mysql rails platform.
