@@ -1,0 +1,16 @@
+{
+	"mysql": {
+		"password": "somepassword"
+	},
+	
+	"user": {
+		"full_name": "John Doe",
+		"ssh-key": "YOUR_SSH_KEY_HERE",
+		"username": "jdoe"
+	},
+	
+	"hostname": "server.hostname.com",
+	
+	"run_list": [ "recipe[main::default]" ]
+	
+}
