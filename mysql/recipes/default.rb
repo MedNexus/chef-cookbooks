@@ -18,12 +18,12 @@
 #
 
 
-package "mysql"
+package "mysql" do
   package_name "mysql-server"
   action :install
 end
 
-package "mysql-devel"
+package "mysql-devel" do
   package_name "mysql-devel"
   action :install
 end
