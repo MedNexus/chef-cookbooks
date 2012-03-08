@@ -18,21 +18,21 @@
 #
 
 user "personal user" do
-  comment "#{node[user][full_name]}"
-  home "/home/#{node[user][username]}"
+  comment "#{node['user']['full_name']}"
+  home "/home/#{node['user']['username']}"
   shell "/bin/bash"
 end
 
-directory "/home/#{node[user][username]}/.ssh" do
-  owner "#{node[user][username]}"
-  group "#{node[user][username]}"
+directory "/home/#{node['user']['username']}/.ssh" do
+  owner "#{node['user']['username']}"
+  group "#{node['user']['username']}"
   mode "500"
   action :create
 end
 
-cookbook_file "/home/#{node[user][username]}/.ssh/authorized_keys" do
-  content "#{node[user][ssh-key]}"
+file "/home/#{node['user']['username']}/.ssh/authorized_keys" do
+  content "#{node['user']['ssh-key']}"
   mode 0400
-  owner "#{node[user][username]}"
-  group "#{node[user][username]}"
+  owner "#{node['user']['username']}"
+  group "#{node['user']['username']}"
 end

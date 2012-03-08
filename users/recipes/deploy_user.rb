@@ -31,8 +31,8 @@ directory "/home/deploy/.ssh" do
   action :create
 end
 
-cookbook_file "/home/deploy/.ssh/authorized_keys" do
-  source "authorized_keys"
+file "/home/deploy/.ssh/authorized_keys" do
+  content "#{node['user']['ssh-key']}"
   mode 0400
   owner "deploy"
   group "deploy"
