@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-user "personal user" do
+user "#{node['user']['username']}" do
   comment "#{node['user']['full_name']}"
   home "/home/#{node['user']['username']}"
   shell "/bin/bash"
