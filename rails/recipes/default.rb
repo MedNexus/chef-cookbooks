@@ -17,10 +17,17 @@
 # limitations under the License.
 #
 
-execute "install rails and passenger" do
-  command "gem install --no-rdoc --no-ri rails passenger"
-  action :run
+gem_package "rails" do
+  action :install
+end
+
+gem_package "passenger" do
+  action :install
   not_if "test -f /usr/local/rvm/gems/ruby-1.9.2-p318/gems/passenger-3.0.11/ext/apache2/mod_passenger.so"
+end
+
+gem_package "therubyracer" do
+  action :install
 end
 
 execute "setup passenger mod_rails" do
