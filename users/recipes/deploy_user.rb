@@ -21,7 +21,6 @@ user "deploy" do
   comment "Deploy User"
   home "/home/deploy"
   shell "/bin/sh"
-  password "$1$oFxS8Iv0$we9eyyR6WtPKOXUmbTBCe/"
 end
 
 directory "/home/deploy/.ssh" do
